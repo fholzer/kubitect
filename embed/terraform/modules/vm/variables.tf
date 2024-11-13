@@ -113,6 +113,11 @@ variable "vm_cpuMode" {
   description = "The libvirt CPU emulation mode."
 }
 
+variable "vm_cpuModel" {
+  type        = string
+  description = "Libvirt CPU model."
+}
+
 variable "vm_cpu" {
   type        = number
   description = "The number of vCPU allocated to the virtual machine"

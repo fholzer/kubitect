@@ -67,6 +67,9 @@ resource "libvirt_domain" "vm_domain" {
 
   cpu {
     mode = var.vm_cpuMode
+    model {
+      name = var.vm_cpuModel
+    }
   }
 
   cloudinit = libvirt_cloudinit_disk.cloud_init.id

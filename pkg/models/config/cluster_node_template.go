@@ -11,6 +11,7 @@ type NodeTemplate struct {
 	OS           OS              `yaml:"os"`
 	SSH          NodeTemplateSSH `yaml:"ssh"`
 	CpuMode      CpuMode         `yaml:"cpuMode,omitempty"`
+	CpuModel     string          `yaml:"cpuModel,omitempty"`
 	DNS          []IP            `yaml:"dns,omitempty"`
 	UpdateOnBoot *bool           `yaml:"updateOnBoot"`
 }
@@ -21,6 +22,7 @@ func (n NodeTemplate) Validate() error {
 		v.Field(&n.OS),
 		v.Field(&n.SSH),
 		v.Field(&n.CpuMode),
+		v.Field(&n.CpuModel),
 		v.Field(&n.DNS),
 	)
 }

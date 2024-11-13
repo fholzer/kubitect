@@ -98,6 +98,7 @@ module "lb_module" {
   vm_network_interface = var.cluster_nodeTemplate_os_networkInterface
   vm_dns               = var.cluster_nodeTemplate_dns
   vm_cpuMode           = var.cluster_nodeTemplate_cpuMode
+  vm_cpuModel          = var.cluster_nodeTemplate_cpuModel
   vm_cpu               = each.value.cpu
   vm_ram               = each.value.ram
   vm_main_disk_size    = each.value.mainDiskSize
@@ -145,6 +146,7 @@ module "master_module" {
   vm_network_interface = var.cluster_nodeTemplate_os_networkInterface
   vm_dns               = var.cluster_nodeTemplate_dns
   vm_cpuMode           = var.cluster_nodeTemplate_cpuMode
+  vm_cpuModel          = var.cluster_nodeTemplate_cpuModel
   vm_cpu               = each.value.cpu
   vm_ram               = each.value.ram
   vm_main_disk_size    = each.value.mainDiskSize
@@ -192,6 +194,7 @@ module "worker_module" {
   vm_network_interface = var.cluster_nodeTemplate_os_networkInterface
   vm_dns               = var.cluster_nodeTemplate_dns
   vm_cpuMode           = var.cluster_nodeTemplate_cpuMode
+  vm_cpuModel          = var.cluster_nodeTemplate_cpuModel
   vm_cpu               = each.value.cpu
   vm_ram               = each.value.ram
   vm_main_disk_size    = each.value.mainDiskSize

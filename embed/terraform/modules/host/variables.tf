@@ -97,6 +97,12 @@ variable "cluster_nodeTemplate_cpuMode" {
   nullable    = true
 }
 
+variable "cluster_nodeTemplate_cpuModel" {
+  type        = string
+  description = "Libvirt CPU model."
+  nullable    = true
+}
+
 #================================
 # Cluster network
 #================================

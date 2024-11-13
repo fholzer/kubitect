@@ -67,6 +67,7 @@ module "host_{{ .Name }}" {
   cluster_nodeTemplate_os_networkInterface = local.config.cluster.nodeTemplate.os.networkInterface
   cluster_nodeTemplate_updateOnBoot        = local.config.cluster.nodeTemplate.updateOnBoot
   cluster_nodeTemplate_cpuMode             = local.config.cluster.nodeTemplate.cpuMode
+  cluster_nodeTemplate_cpuModel            = local.config.cluster.nodeTemplate.cpuModel
   cluster_nodeTemplate_dns                 = try(local.config.cluster.nodeTemplate.dns, null)
 
   # Network configuration
